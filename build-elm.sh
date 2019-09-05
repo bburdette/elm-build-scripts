@@ -1,9 +1,13 @@
 #  this standard preamble doens't work in nixos.
 #  #!/bin/bash
 
+# pass in --optimize for a production build!
+
 # clear the terminal window for a fresh compile.
 clear
 
+# GITHUB DEPENDENCIES
+: '
 # allow dirty repos, but not in production mode.
 if [ "$1" = "--optimize" ]; then
   DIRTY=""
@@ -22,7 +26,11 @@ then
   echo "git dependency problems! exiting build."
   exit 1
 fi
+'
 
+# BUILD THE ELM PROJECT
+
+ 
 # this seems to help clear the screen before the build.
 # 'clear' alone sometimes doesn't happen until the build is almost done.
 echo "starting elm make... wait for 'build complete'!"
@@ -38,6 +46,5 @@ then
   time elm make src/Main.elm --output ../server/static/main.js $1 2> >(tee build-elm-out.txt)
 fi 
 
-# print this because elm doesn't print a message when the link
-# step is finally done.
+# print this when the link step is finally done.
 echo build complete! 
