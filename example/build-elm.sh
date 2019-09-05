@@ -7,6 +7,9 @@
 clear
 
 # GITHUB DEPENDENCIES
+# if you uncomment these, have git-at-revision installed.
+# then add the relevant src dirs from gitdeps/ to your elm.json.
+
 : '
 # allow dirty repos, but not in production mode.
 if [ "$1" = "--optimize" ]; then
