@@ -21,3 +21,9 @@ watch-elm.sh depends on the command line tool *reflex*, for watching the code di
     
 build-elm.sh *optionally* depends on [git-at-revision](https://github.com/bburdette/git-at-revision), for downloading git repos as of a particular commit.  This allows you to depend on elm projects that aren't in the elm package repository.
 
+# try it out
+
+both scripts are in the example folder.  You'll probably modify them to suit your needs.  
+
+Clone this repo, then CD over to the example folder and run ./watch-elm.sh.  In another window run ./server.sh. 
+In a third window edit some code, and in your browser head to localhost:8000.  
