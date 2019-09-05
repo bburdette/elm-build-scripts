@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="description" content="hello world">
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <div id="elm"></div> 
+    <script type="text/javascript">
+      app = Elm.Main.init(
+        { node: document.getElementById("elm"),
+          flags: null, 
+        });
+    </script>
+  </body>
+</html>
